@@ -17,8 +17,8 @@ st.markdown(
     <div style="padding:15px; border-radius:10px; display: flex; align-items: center; justify-content: center;">
         <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/474e213b-3d7a-49ae-9260-c00e2294271f/Frame_35100.png" height="120" alt="Logo" style="border-radius: 10%; margin-right: 20px;">
         <div style="display: flex; flex-direction: column; align-items: center;">
-            <span style="font-weight:bold; font-size: 40px; margin-top:-10px; margin-bottom:-20px;">Subscribe to our Antedote</span>
-            <span style="color:gray; font-size: 23px; margin-bottom:-10px;">Sharp takes on making AI agents work (and be reliable).</span>
+            <span style="font-weight:bold; font-size: 40px; margin-top:-10px; margin-bottom:-10px;">Subscribe to The Antedote</span>
+            <span style="color:gray; font-size: 23px; margin-bottom:0px;">Sharp takes on making AI agents work (and be reliable).</span>
             <a href="https://antedote.antematter.io/" target="_blank" style="text-decoration:none;">
                 <button style="background-color: #C5F873; color: black; border: none; padding: 10px 200px; font-size: 18px; font-weight: bold; border-radius: 5px; cursor: pointer; margin-top: 10px;">
                     Subscribe Now!
