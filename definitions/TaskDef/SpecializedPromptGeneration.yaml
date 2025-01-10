@@ -1,0 +1,108 @@
+description: |
+  <ant-task>
+  {InitialTask}
+  </ant-task>
+
+  <ant-specialized-guidance>
+  {SpecializedGuidance}
+  </ant-specialized-guidance>
+
+  <ant-specialized-critique>
+  {SpecializedCritique}
+  </ant-specialized-critique>
+  
+  <ant-instructions>
+  - Before responding, analyze this prompt and all its components thoroughly.
+  - Make a list of all bad assumptions that could skew your judgment and throw them out.
+  - Understand that your purpose is not to generate output for `<ant-task>` but to refine it based on the specialized guidance and critique provided while using the tagging system defined in `<ant-tagging system>`.
+  - Understand the context provided to you in `<ant-context>` and follow `<ant-steps>` to generate the expected output and present it through `<ant-output-instructions>`.
+  </ant-instructions>
+
+  <ant-tagging-system>  
+   While generating the unified prompt, you MUST ensure that the prompt contains the following prompt tag system implemented within it.Ensure that the tags are not limited to the following and can be expanded as needed:
+   - `<assisstant-task>`: Represents the primary task or goal that needs to be refined, analyzed, or acted upon by the system or intelligent assistant.  
+   - `<assisstant-constraints>`: Specifies restrictions, boundaries, or non-negotiable elements that must be respected during the processing of the prompt or task.  
+   - `<assisstant-context>`: Encapsulates the purpose of the agent, user prompts, specialized critiques, and interactions, helping provide an overall understanding of the task.  
+   - `<assisstant-instructions>`: Provides system-wide rules, protocols, and instructions to ensure consistency, coherence, and quality in processing all elements of the task.  
+   - `<assisstant-steps>`: Outlines detailed steps that the system or agents are instructed to take to accomplish the tasks or refine the prompts.  
+   - `<assisstant-reasoning>`: Specifies reasoning frameworks and methodologies (e.g., Tree of Thoughts, Meta-Prompting) for analyzing and refining tasks effectively.  
+   - `<assisstant-output-instructions>`: Specifies exactly what should be output by the system or agents, often including formatting templates for achieving precise deliverables.  
+   - `<assisstant-prompting-tags>`: Provides a predefined list of advanced prompting techniques (e.g., Role-based Reasoning, Iterative Deepening) that can guide task refinement.  
+   - `<assisstant-task-X>`: Represents one of multiple input tasks (e.g., `<assisstant-task-1>`, `<assisstant-task-2>`) that can be synthesized or cross-referenced for refinement purposes.  
+   - `<assisstant-action-steps>`: Defines actionable measures or guidance for refining or transforming a task or prompt dynamically and effectively.  
+   **NOTE**: You are NOT being told to use all of these tags, but to ensure that the prompt contains the necessary tags for clarity and consistency and to use these to guide your understanding of the tagging system.
+   **NOTE**: You MUST expand the tagging system. Use the above samples only to define your understanding of how it works and then Generate new tags where needed and use them thoroughly.
+   Each Tag must be properly closed and opened and the content within them must be relevant to the task at hand.
+   Example: `<sample-tag>`, `</sample-tag>`
+   </ant-tagging-system>    
+
+  <ant-context>
+  You are tasked with generating a DEEPLY refined version of the high level `<ant-task>` based solely on the critiques provided to you so that the refined version of the task can be passed to an intelligent assistant for a better output.
+  You are meant to analyze the tagging system used in `<ant-task>` and check if it is implemented correctly and if there are any inconsistencies by referring to `<ant-tagging-system>`.
+  The provided critiques on `<ant-task>` consist of two subsections: `<ant-specialized-guidance>` and `<ant-specialized-critique>`.
+  Use these subsections thoroughly to refine the initial task while leveraging your expertise for precise improvement.
+  The updates to the task should be strictly informed by the critique.
+  </ant-context>
+
+  <ant-steps>
+  - **Analyze** The following inputs provided along with their context thoroughly:
+  1. `<ant-task>` - The high level initial task that requires specialized improvements to be passed further to an intelligent assistant.
+  2. `<ant-specialized-guidance>` - The specialized guidance to refine the initial task.
+  3. `<ant-specialized-critique>` - The specialized critique to refine the initial task.
+  - **Understand** `<ant-task>` thoroughly and identify its primary goal and constraints.
+  - **Inspect** the tagging system used in `<ant-task>` and ensure it is implemented correctly and consistently.
+  - **Hand-Pick** the best suited prompting techniques from `<ant-prompting-tags>` to refine `<ant-task>` based on identified goals and constraints and implement it.
+  - **Utilize** the specialized guidance and critique provided in `<ant-specialized-guidance>` & `<ant-specialized-critique>` to refine the structure, clarity and other aspects of `<ant-task>` while ensuring the primary goal and constraints are not compromised.
+  - **Ensure** that the refined `<ant-task>` is in line with the specialized guidance and critique provided and if not, make any adjustments necessary.
+  - **Figure** out the ideal tone for refined `<ant-task>` and implement it within the refined task structure.
+  - **Present** the refined version `<ant-task>` in the output following `<ant-output-instructions>` so that the next intelligent assitant can have a better defined task to work with.
+  </ant-steps>
+
+  <ant-prompting-tags>
+  The following advanced prompting techniques can be used to refine `<ant-task>` effectively:
+    1. **Least-to-Most Prompting**: Starting with minimal guidance and incrementally providing more detailed prompts to help the model solve complex problems step by step.
+    2. **Tree of Thoughts**: Exploring multiple reasoning paths in a tree-like structure to evaluate different possibilities before arriving at the best solution.
+    3. **Meta-Prompting**: Encouraging the model to reflect on and improve its own reasoning process by prompting it to think about how it thinks.
+    4. **Reason + Action Prompting**: Guiding the model by pairing reasoning steps with corresponding actions to achieve a specific task or solve a problem.
+    5. **Dynamic Prompting**: Adjusting prompts in real-time based on the model's previous responses to enhance relevance and effectiveness.
+    6. **Plan it Like a Graph**: Structuring the reasoning process as a graph to visually map out relationships and dependencies between concepts.
+    7. **Role-Based Reasoning**: Assigning roles or perspectives to the model to influence its reasoning approach and generate more diverse responses.
+    8. **Iterative Deepening**: Refining responses through repeated iterations, delving deeper into the topic with each pass to enhance understanding.
+    9. **Temporal Reasoning**: Incorporating time-related concepts into reasoning to handle tasks involving sequences, duration, and temporal relationships.
+  </ant-prompting-tags>
+
+  <ant-output-instructions>
+  - The output must consist of a refined version of `<ant-task>` processed through `<ant-steps>`.
+  - Ensure that the refined variant of `<ant-task>` is clear, detailed, and addresses all relevant critiques provided through `<ant-specialized-guidance>` and `<ant-specialized-critique>`.
+  - The refined task should be structured, coherent, and aligned with the tagging system defined in `<ant-tagging-system>`.
+  - Ensure that you are generating a refined version of the initial task for an intelligent assistant based on critiques provided and not answering the task itself.
+  - Do not include any instructional text not relevant to the refined prompt.
+  - There should be NOTHING outside of the tags mentioned in the `<ant-tagging-system>` and NO references to the original task or the refinement system, or else the output will be considered incorrect.
+  </ant-output-instructions>
+expected_output: |
+  <ant-tagging-system>  
+   While generating the unified prompt, you MUST ensure that the prompt contains the following prompt tag system implemented within it.Ensure that the tags are not limited to the following and can be expanded as needed:
+   - `<assisstant-task>`: Represents the primary task or goal that needs to be refined, analyzed, or acted upon by the system or intelligent assistant.  
+   - `<assisstant-constraints>`: Specifies restrictions, boundaries, or non-negotiable elements that must be respected during the processing of the prompt or task.  
+   - `<assisstant-context>`: Encapsulates the purpose of the agent, user prompts, specialized critiques, and interactions, helping provide an overall understanding of the task.  
+   - `<assisstant-instructions>`: Provides system-wide rules, protocols, and instructions to ensure consistency, coherence, and quality in processing all elements of the task.  
+   - `<assisstant-steps>`: Outlines detailed steps that the system or agents are instructed to take to accomplish the tasks or refine the prompts.  
+   - `<assisstant-reasoning>`: Specifies reasoning frameworks and methodologies (e.g., Tree of Thoughts, Meta-Prompting) for analyzing and refining tasks effectively.  
+   - `<assisstant-output-instructions>`: Specifies exactly what should be output by the system or agents, often including formatting templates for achieving precise deliverables.  
+   - `<assisstant-prompting-tags>`: Provides a predefined list of advanced prompting techniques (e.g., Role-based Reasoning, Iterative Deepening) that can guide task refinement.  
+   - `<assisstant-task-X>`: Represents one of multiple input tasks (e.g., `<assisstant-task-1>`, `<assisstant-task-2>`) that can be synthesized or cross-referenced for refinement purposes.  
+   - `<assisstant-action-steps>`: Defines actionable measures or guidance for refining or transforming a task or prompt dynamically and effectively.  
+   **NOTE**: You are NOT being told to use all of these tags, but to ensure that the prompt contains the necessary tags for clarity and consistency and to use these to guide your understanding of the tagging system.
+   **NOTE**: You MUST expand the tagging system. Use the above samples only to define your understanding of how it works and then Generate new tags where needed and use them thoroughly.
+   Each Tag must be properly closed and opened and the content within them must be relevant to the task at hand.
+   Example: `<sample-tag>`, `</sample-tag>`
+   </ant-tagging-system>    
+
+  <ant-output-instructions>
+  - The output must consist of a HIGHLY refined version of `<ant-task>` processed through `<ant-steps>`.
+  - Ensure that the refined variant of `<ant-task>` is clear, well detailed, and addresses all relevant critiques provided through `<ant-specialized-guidance>` and `<ant-specialized-critique>`.
+  - The refined task should be structured, coherent, and aligned with the tagging system defined in `<ant-tagging-system>`.
+  - Ensure that you are generating a refined version of the initial task for an intelligent assistant based on critiques provided and not answering the task itself.
+  - Do not include any instructional text not relevant to the refined prompt.
+  - There should be NOTHING outside of the tags mentioned in the `<ant-tagging-system>` and NO references to the original task or the refinement system, or else the output will be considered incorrect.
+  </ant-output-instructions>

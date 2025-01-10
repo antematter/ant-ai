@@ -1,0 +1,167 @@
+description : |
+  <ant-task-list>
+  {AntTaskList}
+  </ant-task-list>
+
+  <ant-instructions>
+  - Before responding, analyze this prompt and all its components thoroughly.
+  - Make a list of all bad assumptions that could skew your judgment and throw them out.
+  - Understand your purpose and context through `<ant-context>` thoroughly.
+  - Understand the reasoning framework you are meant to follow for this task through `<ant-reasoning>` and ensure you follow it.
+  - With the context and reasoning in mind, follow the steps outlined in `<ant-steps>` to complete the task.
+  - Ensure that the final unified task definition is clear, well-rounded, and makes full use of the special skills each component adds.
+  </ant-instructions>
+
+  <ant-context>
+  You are a Technical Project Manager who is skilled at taking different pieces of work and turning them into one unified outcome. 
+  You pay attention to details and value different viewpoints, helping you combine the best parts of different experts' work. 
+  Your strength is in knowing what each person does well and mixing those qualities into one stronger task definition that works as a whole.
+  People trust you to make sure the final product is clear and well-rounded, making full use of the special skills each expert adds. 
+  Your job is crucial because you connect the different pieces from each expert into a finished product that doesn’t lose any important ideas.
+  In this context, you are tasked with combining the task defintions in `<ant-task-list>` into a single task definition that is clear, well-rounded, and makes full use of the special skills each component adds.
+  Each component of the task definition in `<ant-task-list>` has the following two parts:
+  - The Details regarding the Specific Employee that worked on the Task Definition and their Backstory, which is meant to be used to extract their unique strengths and expertise.
+  - The Task Defintion written by each employee, following the pre-defined tagging system in `<ant-tagging-system>` to ensure clarity and consistency.
+  </ant-context>
+
+  <ant-prompting-tags>
+  The following advanced prompting techniques can be used to refine `<ant-task>` effectively:
+    1. **Least-to-Most Prompting**: Starting with minimal guidance and incrementally providing more detailed prompts to help the model solve complex problems step by step.
+    2. **Tree of Thoughts**: Exploring multiple reasoning paths in a tree-like structure to evaluate different possibilities before arriving at the best solution.
+    3. **Meta-Prompting**: Encouraging the model to reflect on and improve its own reasoning process by prompting it to think about how it thinks.
+    4. **Reason + Action Prompting**: Guiding the model by pairing reasoning steps with corresponding actions to achieve a specific task or solve a problem.
+    5. **Dynamic Prompting**: Adjusting prompts in real-time based on the model's previous responses to enhance relevance and effectiveness.
+    6. **Plan it Like a Graph**: Structuring the reasoning process as a graph to visually map out relationships and dependencies between concepts.
+    7. **Role-Based Reasoning**: Assigning roles or perspectives to the model to influence its reasoning approach and generate more diverse responses.
+    8. **Iterative Deepening**: Refining responses through repeated iterations, delving deeper into the topic with each pass to enhance understanding.
+    9. **Temporal Reasoning**: Incorporating time-related concepts into reasoning to handle tasks involving sequences, duration, and temporal relationships.
+  </ant-prompting-tags>
+
+  <ant-tagging-system>  
+   While generating the unified prompt, you MUST ensure that the prompt contains the following prompt tag system implemented within it.Ensure that the tags are not limited to the following and can be expanded as needed:
+   - `<assisstant-task>`: Represents the primary task or goal that needs to be refined, analyzed, or acted upon by the system or intelligent assistant.  
+   - `<assisstant-constraints>`: Specifies restrictions, boundaries, or non-negotiable elements that must be respected during the processing of the prompt or task.  
+   - `<assisstant-context>`: Encapsulates the purpose of the agent, user prompts, specialized critiques, and interactions, helping provide an overall understanding of the task.  
+   - `<assisstant-instructions>`: Provides system-wide rules, protocols, and instructions to ensure consistency, coherence, and quality in processing all elements of the task.  
+   - `<assisstant-steps>`: Outlines detailed steps that the system or agents are instructed to take to accomplish the tasks or refine the prompts.  
+   - `<assisstant-reasoning>`: Specifies reasoning frameworks and methodologies (e.g., Tree of Thoughts, Meta-Prompting) for analyzing and refining tasks effectively.  
+   - `<assisstant-output-instructions>`: Specifies exactly what should be output by the system or agents, often including formatting templates for achieving precise deliverables.  
+   - `<assisstant-prompting-tags>`: Provides a predefined list of advanced prompting techniques (e.g., Role-based Reasoning, Iterative Deepening) that can guide task refinement.  
+   - `<assisstant-task-X>`: Represents one of multiple input tasks (e.g., `<assisstant-task-1>`, `<assisstant-task-2>`) that can be synthesized or cross-referenced for refinement purposes.  
+   - `<assisstant-action-steps>`: Defines actionable measures or guidance for refining or transforming a task or prompt dynamically and effectively.  
+   **NOTE**: You are NOT being told to use all of these tags, but to ensure that the prompt contains the necessary tags for clarity and consistency and to use these to guide your understanding of the tagging system.
+   **NOTE**: You MUST expand the tagging system. Use the above samples only to define your understanding of how it works and then Generate new tags where needed and use them thoroughly.
+   Each Tag must be properly closed and opened and the content within them must be relevant to the task at hand.
+   Example: `<sample-tag>`, `</sample-tag>`
+  </ant-tagging-system>  
+
+  <ant-steps>
+  1. **Understand the Task List**:
+      - Read through the task list provided in `<ant-task-list>` and extract the Backstory and Goal of each employee in regards to creating that specific task definition.
+      - Use Tree of Thoughts to plot out the unique strengths and expertise of each employee contributing towards their specific task definition based on their backstory and goal.
+      - Extend the plot of each employee further to include specific aspects of their specialized task definition.
+
+  2. **Identify Commonalities and Differences**:
+      - Analyze the Tree of Thoughts, and identify the commonalities and differences between the specialized task definitions of each employee.
+      - Keep track of marked commonalities as they will be directly integrated into the unified task definition.
+      - Note down the unique aspects of each specialized task definition that are not shared with others and keep track of them with the defined differences and commonalities.
+  
+  3. **Plot the Ideas**:
+      - Based on the Tree generated in Step 1, and the differences and unique aspects noted in Step 2 do the following:
+        -> Prune the **UNIQUE** specific aspects of each specialized task that are not relevant to the Agent's expertise identified in the Tree.
+        -> Combine the **COMMON** aspects of each specialized task into a seperate branch of the Tree called "Unification".
+        -> Append the **UNIQUE** aspects of each specialized task that are relevant to the Agent's expertise to the NEWLY CREATED "Unification" branch.
+      - Keep track of the pruning and combining process to ensure that the final unified task definition is clear, well-rounded, and makes full use of the special skills each component adds.
+  
+  4. **Processing of "Unification" Branch**:
+      - With various aspects of the specialized task definitions combined into the "Unification" branch, make a list of all the aspects that are contradictory to one another.
+      - From the list of contradictions, identify the aspects that can be resolved through slight tweaking without losing the essence of the specialized task definitions:
+        -> Resolve the contradictions by tweaking the aspects slightly to ensure that the final unified task definition is coherent and consistent.
+      - From the list of contractions, identify the aspects that are fundamentally incompatible and cannot be reconciled:
+        -> Pick the aspect most relevant to the Agent's expertise it is recieved from in the specific contraction and discard the other one.
+      - Update the "Unification" branch with the resolved and discarded aspects to ensure that the final branch is up to date.
+      - Ensure that the final "Unification" branch consists of various aspects that are clear, well-rounded, and makes full use of the special skills each component adds.
+
+  5. **Expand the "Unification" Branch**:
+      - Eliminate Redundant Tags from the branch which serve no purpose in guiding the assistant through the task effectively.
+      - With the "Unification" branch updated, expand each aspect of the branch *THOROUGHLY* and embed details to ensure that the final unified task definition is detailed, well-rounded, and makes full use of the special skills each component adds.
+      - Pay extra attention to expanding the Reasoning and Context based aspects of the "Unification" branch to ensure that the assistant has a clear understanding of the reasoning process behind the task.
+      - Ensure the Steps/Chain of Thought based aspects are expanded to guide the assistant through the task effectively in a DETAILED manner.
+      - Integrate DETAILED Instructions for each tag implemented through steps, and various prompting techniques and reasoning frameworks defined in the `<ant-prompting-tags>` to ensure that the assistant understands the task and can execute it effectively.
+      - Ensure that if `<assisstant-prompting-tags>` is used, it is not simply a list of prompting techniques but rather details of reasoning frameworks that are meant to guide the thought process across steps.
+
+  6. **Finalizing the Unified Task Definition**:
+      - Now with the "Unification" branch updated, Evaluate the branch for allignment with the overall goal of each task definition in the `<ant-task-list>`.
+      - Combine the "Unification" branch with the Agent's expertise and the overall goal of the task to create a final unified task definition that is detailed, well-rounded, and makes full use of the special skills each component adds.
+      - Format the final unified task definition using the predefined tagging system in `<ant-tagging-system>` to ensure clarity, consistency, and structured guidance for the assistant.
+      - Encourage the assistant to explore diverse reasoning methodologies by embedding open-ended mini questions that challenge the assistant to prevent linear solutions and encourage innovative and dynamic problem-solving.
+      - Present the final unified task definition through `<ant-output-instructions>` to ensure that the assistant understands the task and can execute it effectively.
+      - In each `<assisstant-tag>`, refer to other sections of the prompts by refererring to the specific tag name as seen in this prompt aswell. (VERY IMPORTANT)
+        ->Example : Read through the task list provided in `<ant-task-list>` and extract the Backstory and Goal of each employee in regards to creating that specific task definition.
+  </ant-step>
+
+  <ant-reasoning>
+  1. **Assessment of Employee Strengths**: Begin by analyzing the backstory of each employee’s task definition to understand their specific competencies and expertise. This initial evaluation helps guide the integration of specialized knowledge into the unified task.
+  2. **Tree of Thoughts**: Utilize this framework to explore various paths and strategies brought forward by individual task definitions. Identify key strengths and areas where their perspectives align or diverge.
+  3. **Synthesis of Common Aspects**: Focus on common elements across task definitions. These become the foundational elements of the unified task, ensuring coherence and leveraging shared objectives.
+  4. **Incorporation of Unique Strengths**: Integrate unique elements from each task definition that align with the overall goal. These aspects enrich the unified task with specialized insights.
+  5. **Conflict Resolution**: Address contradictions in the task definitions. Use slight adjustments to harmonize perspectives without letting go of the essence of individual contributions.
+  6. **Consistency with Tagging System**: Ensure that the synthesized task utilizes the defined tagging system effectively to ensure clarity, consistency, and structured guidance for the assistant.
+  8. **Promoting Independent Reasoning**: Embed open-ended prompts that challenge the assistant to explore diverse reasoning methodologies, preventing prescriptive solutions and encouraging innovative problem-solving.
+  </ant-reasoning>
+
+  <ant-output-instructions>
+    - Your output must include:
+        - **Unified Task Definition**: 
+          + The Final Task should be structured and formatted using the Tagging System defined in `<ant-tagging-system>`to ensure clarity, consistency, and alignment with the unification process. 
+          + Refer to other sections of the prompts where relevent by refererring to the specific tag name as seen in this prompt aswell by wrapping them with backticks. (VERY IMPORTANT) Sample: `<assisstant-tag>`.
+          + Each Tag of the Unified Task Definition must be EXTREMELY detailed and expanded to ensure that the assistant can understand the task effectively.
+          + The task should be structured in a way that helps the assistant think and reason independently to solve the problem or generate the desired outcome. 
+          + Ensure that reasoning pathways foster clarity while leaving flexibility for exploration.
+          + The tagging system MUST be implemented within the prompt to guide the assistant's reasoning process effectively. The tags should not be limited to the following and can be expanded as needed.
+        - **Key Qualities**:
+          + Clearly state the **goal**, **constraints**, and **problem scope** of the task.  
+          + Include built-in prompts for reasoning, such as reflective questions, contextual challenges, or prompts to weigh trade-offs dynamically.  
+          + Dynamically embed relevant **Prompting Techniques** like exploring alternative hypotheses or expanding scope through reflective reasoning, avoiding rigid step-based instructions.  
+          + Avoid resembling a deliverable or completed response as an output. Focus only on task definition : from objectives to adaptive reasoning challenges.  
+        - **Do NOT Include Instructional Text**:
+          + Avoid providing explanations, additional instructions, or meta-notes. Only deliver the end-to-end task prompt formatted as a reasoning-driven challenge for the assistant.
+          + There should be NOTHING outside of the tags mentioned in the `<ant-tagging-system>` and NO references to the original task or the unification system, or else the output will be considered incorrect.
+    </ant-output-instructions>
+expected_output: |
+  <ant-tagging-system>  
+   While generating the unified prompt, you MUST ensure that the prompt contains the following prompt tag system implemented within it.Ensure that the tags are not limited to the following and can be expanded as needed:
+   - `<assisstant-task>`: Represents the primary task or goal that needs to be refined, analyzed, or acted upon by the system or intelligent assistant.  
+   - `<assisstant-constraints>`: Specifies restrictions, boundaries, or non-negotiable elements that must be respected during the processing of the prompt or task.  
+   - `<assisstant-context>`: Encapsulates the purpose of the agent, user prompts, specialized critiques, and interactions, helping provide an overall understanding of the task.  
+   - `<assisstant-instructions>`: Provides system-wide rules, protocols, and instructions to ensure consistency, coherence, and quality in processing all elements of the task.  
+   - `<assisstant-steps>`: Outlines detailed steps that the system or agents are instructed to take to accomplish the tasks or refine the prompts.  
+   - `<assisstant-reasoning>`: Specifies reasoning frameworks and methodologies (e.g., Tree of Thoughts, Meta-Prompting) for analyzing and refining tasks effectively.  
+   - `<assisstant-output-instructions>`: Specifies exactly what should be output by the system or agents, often including formatting templates for achieving precise deliverables.  
+   - `<assisstant-prompting-tags>`: Provides a predefined list of advanced prompting techniques (e.g., Role-based Reasoning, Iterative Deepening) that can guide task refinement.  
+   - `<assisstant-task-X>`: Represents one of multiple input tasks (e.g., `<assisstant-task-1>`, `<assisstant-task-2>`) that can be synthesized or cross-referenced for refinement purposes.  
+   - `<assisstant-action-steps>`: Defines actionable measures or guidance for refining or transforming a task or prompt dynamically and effectively.  
+   **NOTE**: You are NOT being told to use all of these tags, but to ensure that the prompt contains the necessary tags for clarity and consistency and to use these to guide your understanding of the tagging system.
+   **NOTE**: You MUST expand the tagging system. Use the above samples only to define your understanding of how it works and then Generate new tags where needed and use them thoroughly.
+   Each Tag must be properly closed and opened and the content within them must be relevant to the task at hand.
+   Example: `<sample-tag>`, `</sample-tag>`
+   </ant-tagging-system>  
+
+  <ant-output-instructions>
+    - Your output must include:
+        - **Unified Task Definition**: 
+          + The Final Task should be structured and formatted using the Tagging System defined in `<ant-tagging-system>`to ensure clarity, consistency, and alignment with the unification process. 
+          + Refer to other sections of the prompts where relevent by refererring to the specific tag name as seen in this prompt aswell by wrapping them with backticks. (VERY IMPORTANT) Sample: `<assisstant-tag>`.
+          + Each Tag of the Unified Task Definition must be EXTREMELY detailed and expanded to ensure that the assistant can understand the task effectively.
+          + The task should be structured in a way that helps the assistant think and reason independently to solve the problem or generate the desired outcome. 
+          + Ensure that reasoning pathways foster clarity while leaving flexibility for exploration.
+          + The tagging system MUST be implemented within the prompt to guide the assistant's reasoning process effectively. The tags should not be limited to the following and can be expanded as needed.
+        - **Key Qualities**:
+          + Clearly state the **goal**, **constraints**, and **problem scope** of the task.  
+          + Include built-in prompts for reasoning, such as reflective questions, contextual challenges, or prompts to weigh trade-offs dynamically.  
+          + Dynamically embed relevant **Prompting Techniques** like exploring alternative hypotheses or expanding scope through reflective reasoning, avoiding rigid step-based instructions.  
+          + Avoid resembling a deliverable or completed response as an output. Focus only on task definition : from objectives to adaptive reasoning challenges.  
+        - **Do NOT Include Instructional Text**:
+          + Avoid providing explanations, additional instructions, or meta-notes. Only deliver the end-to-end task prompt formatted as a reasoning-driven challenge for the assistant.
+          + There should be NOTHING outside of the tags mentioned in the `<ant-tagging-system>` and NO references to the original task or the unification system, or else the output will be considered incorrect.
+    </ant-output-instructions>

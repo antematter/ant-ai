@@ -1,0 +1,10 @@
+#HyperParameters for GA Run
+
+#Number of Generations for GA to run (Default: 3) (Integer)
+MaxGenerations: 3
+#Number of Genes to produce in one generation (Default: 2) (Integer)
+SelectionSize: 2
+#Number of Genes to Consider CarryForward from last generation (Default: 2) (Integer)
+TopCarry: 2
+#Probability of i-th TopCarry Gene being added to new population (Default: 0.5) (Float)
+TopCarryRate: 0.5

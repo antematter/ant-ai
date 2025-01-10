@@ -1,0 +1,156 @@
+description: |
+   <ant-task-1>
+   {InitialTask1}
+   </ant-task-1>
+   
+   <ant-task-2>
+   {InitialTask2}
+   </ant-task-2>
+   
+   <ant-prompt-critique-1>
+   {PromptCritique1}
+   </ant-prompt-critique-1>
+   
+   <ant-prompt-critique-2>
+   {PromptCritique2}
+   </ant-prompt-critique-2>
+
+   <ant-prompting-tags>
+   The following advanced prompting techniques can be used to refine `<ant-task>` effectively:
+    1. **Least-to-Most Prompting**: Starting with minimal guidance and incrementally providing more detailed prompts to help the model solve complex problems step by step.
+    2. **Tree of Thoughts**: Exploring multiple reasoning paths in a tree-like structure to evaluate different possibilities before arriving at the best solution.
+    3. **Meta-Prompting**: Encouraging the model to reflect on and improve its own reasoning process by prompting it to think about how it thinks.
+    4. **Reason + Action Prompting**: Guiding the model by pairing reasoning steps with corresponding actions to achieve a specific task or solve a problem.
+    5. **Dynamic Prompting**: Adjusting prompts in real-time based on the model's previous responses to enhance relevance and effectiveness.
+    6. **Plan it Like a Graph**: Structuring the reasoning process as a graph to visually map out relationships and dependencies between concepts.
+    7. **Role-Based Reasoning**: Assigning roles or perspectives to the model to influence its reasoning approach and generate more diverse responses.
+    8. **Iterative Deepening**: Refining responses through repeated iterations, delving deeper into the topic with each pass to enhance understanding.
+    9. **Temporal Reasoning**: Incorporating time-related concepts into reasoning to handle tasks involving sequences, duration, and temporal relationships.
+   </ant-prompting-tags>
+
+   <ant-tagging-system>  
+   While generating the hybrid prompt, you MUST ensure that the prompt contains the following prompt tag system implemented within it.Ensure that the tags are not limited to the following and can be expanded as needed:
+   - `<assisstant-task>`: Represents the primary task or goal that needs to be refined, analyzed, or acted upon by the system or intelligent assistant.  
+   - `<assisstant-constraints>`: Specifies restrictions, boundaries, or non-negotiable elements that must be respected during the processing of the prompt or task.  
+   - `<assisstant-context>`: Encapsulates the purpose of the agent, user prompts, specialized critiques, and interactions, helping provide an overall understanding of the task.  
+   - `<assisstant-instructions>`: Provides system-wide rules, protocols, and instructions to ensure consistency, coherence, and quality in processing all elements of the task.  
+   - `<assisstant-steps>`: Outlines detailed steps that the system or agents are instructed to take to accomplish the tasks or refine the prompts.  
+   - `<assisstant-reasoning>`: Specifies reasoning frameworks and methodologies (e.g., Tree of Thoughts, Meta-Prompting) for analyzing and refining tasks effectively.  
+   - `<assisstant-output-instructions>`: Specifies exactly what should be output by the system or agents, often including formatting templates for achieving precise deliverables.  
+   - `<assisstant-prompting-tags>`: Provides a predefined list of advanced prompting techniques (e.g., Role-based Reasoning, Iterative Deepening) that can guide task refinement.  
+   - `<assisstant-task-X>`: Represents one of multiple input tasks (e.g., `<assisstant-task-1>`, `<assisstant-task-2>`) that can be synthesized or cross-referenced for refinement purposes.  
+   - `<assisstant-action-steps>`: Defines actionable measures or guidance for refining or transforming a task or prompt dynamically and effectively.  
+   **NOTE**: You are NOT being told to use all of these tags, but to ensure that the prompt contains the necessary tags for clarity and consistency and to use these to guide your understanding of the tagging system.
+   **NOTE**: You MUST expand the tagging system. Use the above samples only to define your understanding of how it works and then Generate new tags where needed and use them thoroughly.
+   Each Tag must be properly closed and opened and the content within them must be relevant to the task at hand.
+   Example: `<sample-tag>`, `</sample-tag>`
+   </ant-tagging-system>  
+
+   <ant-purpose>
+   Your task is to **crossover** `<ant-task-1>` and `<ant-task-2>` to produce a **new, dynamic task**. The refined task should actively challenge the assistant to reason, analyze, and creatively explore solutions rather than prescribing a structure or acting as an output. The goals are:  
+   - Combine the strengths of `<ant-task-1>` and `<ant-task-2>` while addressing inefficiencies and missed opportunities highlighted in `<ant-prompt-critique-1>` and `<ant-prompt-critique-2>`.  
+   - Prompt the assistant to explore critical concepts, identify reasoning pathways, and dynamically decide its approach to addressing the task.  
+   - Avoid making the task resemble an output by ensuring it maintains high-level objectives, reasoning challenges, and exploration-focused goals.  
+   - Integrate reasoning tools like **Tree of Thoughts**, **Dynamic Prompting**, and **Reflection** into the task’s natural prompts and challenges.  
+   **NOTE**: If the output is too similar to the original tasks or lacks substantial unique Reasoning Pathways, it will be considered incorrect. The goal is to create a refined task that is significantly different and innovative compared to the original while incorporating suggestions and reasoning frameworks.
+   </ant-purpose>
+
+   <ant-context>
+   Inputs to consider:  
+   1. `<ant-task-1>` and `<ant-task-2>` - The foundational tasks to merge into a cohesive and innovative hybrid.  
+   2. `<ant-prompt-critique-1>` and `<ant-prompt-critique-2>` - Feedback highlighting inefficiencies, unclear reasoning paths, or areas for improvement in each task.  
+   3. `<ant-prompting-tags>` - Techniques like **Tree of Thoughts**, **Self-Ask Prompting**, and **Meta-Prompting**, which should naturally guide the refined task’s structure without overly prescribing solutions.  
+   4. `<ant-tagging-system>` - The tagging system to ensure the refined task is structured, coherent, and aligned with the assistant’s reasoning capabilities.
+   </ant-context>
+
+   <ant-operating-instructions>
+   - Begin by analyzing `<ant-task-1>` and `<ant-task-2>` to understand their objectives, overlaps, and core challenges. Identify opportunities for synthesis and expansion using the critiques.  
+   - Develop reasoning-driven exploration challenges for the hybrid task, guiding the assistant to explore pathways, address dilemmas, and generate thoughtful solutions independently. Avoid prescriptive workflows or outputs.  
+   - Deliver a refined task that serves as an **invitation to reasoning**, leaving room for the assistant to decide approaches, choose methods, and synthesize insights dynamically.  
+   - Ensure the task is structured, coherent, and challenging, focusing on reasoning techniques, and exploration opportunities.
+   - Use the tagging system in `<ant-tagging-system>` to guide the task’s structure, ensuring it aligns with the assistant’s capabilities and the refined goals.
+   </ant-operating-instructions>
+
+   <ant-steps>
+   1. **Understand the Original Goals**:  
+      - Review `<ant-task-1>` and `<ant-task-2>` to determine their goals, challenges, and strengths.  
+      - Analyze their core objectives to uncover alignment opportunities or divergent areas that need reconciliation.  
+
+   2. **Expand Using Critiques**:  
+      - Use `<ant-prompt-critique-1>` and `<ant-prompt-critique-2>` to identify gaps and missed opportunities in each task.  
+      - Reflect on critiques to highlight reasoning paths that were overlooked or incomplete and determine how to address them in the hybrid task.  
+
+   3. **Frame Dynamic Challenges**:  
+      - Instead of predefining outcomes, embed open-ended reasoning frameworks within the task that push the assistant to independently discover solutions. Examples include:  
+      + *“Explore multiple reasoning frameworks or trade-offs, reflecting on how they apply to resolving various dilemmas in defined task.”*  
+      + *“Propose strategies to resolve contrasting feedback provided in critiques while balancing innovation and functionality.”*  
+
+   4. **Embed Reflective Prompts**:  
+      - Introduce checkpoints where reasoning decisions are tested and refined dynamically by the assistant itself. For example:  
+      + *“What logical outcomes might emerge from your chosen path, and how effectively do they address the task's constraints?”*  
+      + *“Evaluate alternative approaches and decide which best aligns with the specified goals while maintaining adaptability.”*  
+
+   5. **Avoid Explicit Outputs in Task Design**:  
+      - Ensure the task focuses on outlining goals, challenges, tools for exploration, and reasoning prompts but avoids specifying content, structures, or solutions resembling a complete output.  
+
+   6. **Iteratively Refine and Deliver the Task**:  
+      - Validate that the hybrid task encourages creative exploration and layered reasoning without resembling an essay-style deliverable. Finalize the output as an adaptable, reasoning-driven challenge.  
+      - Use the tagging system in `<ant-tagging-system>` to structure the task effectively, and use the advanced prompting techniques to guide the assistant’s reasoning process.
+   </ant-steps>
+
+   <ant-reasoning>
+   Use reasoning techniques to create a refined task that challenges exploration and independent problem-solving.  
+   1. **Core-Goal Alignment**: Start by collecting the goals and themes explored in `<ant-task-1>` and `<ant-task-2>`. Address unresolved issues identified in `<ant-prompt-critique-1>` and `<ant-prompt-critique-2>`.  
+   2. **Exploratory Thinking**: Build pathways within the task that encourage the assistant to explore trade-offs, test possibilities, and iteratively optimize solutions.  
+   3. **Refinement by Reflection**: Let the assistant redefine its approach as it progresses by reflecting on whether its chosen pathway aligns with the task's constraints and opportunities.  
+   4. **Synthesis from Paths**: Encourage dynamic synthesis of reasoning outcomes to ensure that the task remains exploratory but results in actionable guidance.
+   5. **Adaptive Reasoning Challenges**: Introduce challenges that adapt to the assistant’s thought process, pushing it to think beyond initial assumptions and explore diverse reasoning strategies.
+   </ant-reasoning>
+
+   <ant-output-instructions>
+   - Your output must include:
+      - **Refined Prompt**: Provide a hybrid task that allows independent thinking and exploration to address the core goals dynamically. 
+         + The hybrid Task should be structured and formatted using the Tagging System defined in `<ant-tagging-system>` to ensure clarity, consistency, and alignment with the unification process. The task should be structured in a way that helps the assistant think and reason independently to solve the problem or generate the desired outcome. Ensure that reasoning pathways foster clarity while leaving flexibility for exploration.
+         + The tagging system MUST be implemented within the prompt to guide the assistant's reasoning process effectively. The tags should not be limited to the following and can be expanded as needed.
+      - **Key Qualities of the Refined hybrid Task**:
+         + Ensure objectives are outlined, challenges are posed, and room is left for dynamic reasoning pathways.  
+         + Present reasoning prompts (e.g., hypothetical scenarios or open-ended questions) that stimulate critical thinking while carefully avoiding pre-outlined steps or solutions.  
+         + Avoid resembling a deliverable or completed response as an output. Focus only on task definition : from objectives to adaptive reasoning challenges.  
+         + Dynamically embed relevant **Prompting Techniques** like exploring alternative hypotheses or expanding scope through reflective reasoning, avoiding rigid step-based instructions.
+      - **Do NOT Include Instructional Text**:
+         + Avoid providing explanations, additional instructions, or meta-notes. Only deliver the end-to-end task prompt formatted as a reasoning-driven challenge for the assistant.
+         + There should be NOTHING outside of the tags mentioned in the `<ant-tagging-system>` and NO references to the original task or the Crossover system, or else the output will be considered incorrect.
+   </ant-output-instructions>
+expected_output: |
+   <ant-tagging-system>  
+   While generating the hybrid prompt, you MUST ensure that the prompt contains the following prompt tag system implemented within it.Ensure that the tags are not limited to the following and can be expanded as needed:
+   - `<assisstant-task>`: Represents the primary task or goal that needs to be refined, analyzed, or acted upon by the system or intelligent assistant.  
+   - `<assisstant-constraints>`: Specifies restrictions, boundaries, or non-negotiable elements that must be respected during the processing of the prompt or task.  
+   - `<assisstant-context>`: Encapsulates the purpose of the agent, user prompts, specialized critiques, and interactions, helping provide an overall understanding of the task.  
+   - `<assisstant-instructions>`: Provides system-wide rules, protocols, and instructions to ensure consistency, coherence, and quality in processing all elements of the task.  
+   - `<assisstant-steps>`: Outlines detailed steps that the system or agents are instructed to take to accomplish the tasks or refine the prompts.  
+   - `<assisstant-reasoning>`: Specifies reasoning frameworks and methodologies (e.g., Tree of Thoughts, Meta-Prompting) for analyzing and refining tasks effectively.  
+   - `<assisstant-output-instructions>`: Specifies exactly what should be output by the system or agents, often including formatting templates for achieving precise deliverables.  
+   - `<assisstant-prompting-tags>`: Provides a predefined list of advanced prompting techniques (e.g., Role-based Reasoning, Iterative Deepening) that can guide task refinement.  
+   - `<assisstant-task-X>`: Represents one of multiple input tasks (e.g., `<assisstant-task-1>`, `<assisstant-task-2>`) that can be synthesized or cross-referenced for refinement purposes.  
+   - `<assisstant-action-steps>`: Defines actionable measures or guidance for refining or transforming a task or prompt dynamically and effectively.  
+   **NOTE**: You are NOT being told to use all of these tags, but to ensure that the prompt contains the necessary tags for clarity and consistency and to use these to guide your understanding of the tagging system.
+   **NOTE**: You MUST expand the tagging system. Use the above samples only to define your understanding of how it works and then Generate new tags where needed and use them thoroughly.
+   Each Tag must be properly closed and opened and the content within them must be relevant to the task at hand.
+   Example: `<sample-tag>`, `</sample-tag>`
+   </ant-tagging-system>  
+
+   <ant-output-instructions>
+   - Your output must include:
+      - **Refined Prompt**: Provide a hybrid task that allows independent thinking and exploration to address the core goals dynamically. 
+         + The hybrid Task should be structured and formatted using the Tagging System defined in `<ant-tagging-system>` to ensure clarity, consistency, and alignment with the unification process. The task should be structured in a way that helps the assistant think and reason independently to solve the problem or generate the desired outcome. Ensure that reasoning pathways foster clarity while leaving flexibility for exploration.
+         + The tagging system MUST be implemented within the prompt to guide the assistant's reasoning process effectively. The tags should not be limited to the following and can be expanded as needed.
+      - **Key Qualities of the Refined hybrid Task**:
+         + Ensure objectives are outlined, challenges are posed, and room is left for dynamic reasoning pathways.  
+         + Present reasoning prompts (e.g., hypothetical scenarios or open-ended questions) that stimulate critical thinking while carefully avoiding pre-outlined steps or solutions.  
+         + Avoid resembling a deliverable or completed response as an output. Focus only on task definition : from objectives to adaptive reasoning challenges.  
+         + Dynamically embed relevant **Prompting Techniques** like exploring alternative hypotheses or expanding scope through reflective reasoning, avoiding rigid step-based instructions.
+      - **Do NOT Include Instructional Text**:
+         + Avoid providing explanations, additional instructions, or meta-notes. Only deliver the end-to-end task prompt formatted as a reasoning-driven challenge for the assistant.
+         + There should be NOTHING outside of the tags mentioned in the `<ant-tagging-system>` and NO references to the original task or the Crossover system, or else the output will be considered incorrect.
+   </ant-output-instructions>

@@ -1,0 +1,110 @@
+description: |
+  <ant-task>
+  {InitialTask}
+  </ant-task>
+
+  <ant-specialized-guidance>
+  {SpecializedGuidance}
+  </ant-specialized-guidance>
+
+  <ant-refined-task>
+  {RefinedTask}
+  </ant-refined-task>
+
+  <ant-refined-task-output>
+  {RefinedTaskOutput}
+  </ant-refined-task-output>
+
+  <ant-general-evaluation>
+  {GeneralEvaluation}
+  </ant-general-evaluation>
+
+  <ant-reasoning-evaluation>
+  {ReasoningEvaluation}
+  </ant-reasoning-evaluation>
+
+  <ant-purpose>
+  Your task is to act as an **STRICT** Workflow Analyzer for a Prompt Refinement System. You will evaluate the refinement process and the resulting output based on:
+    - The **Goal and Constraints** retained or adapted correctly from `<ant-task>` to `<ant-refined-task>`.
+    - The **Quality of the Refined Task**, considering coherence, clarity, adaptability, and goal alignment.
+    - The utilization of the tagging system passed forward from `<ant-task>` to `<ant-refined-task>`.
+    - The *Quality of the tagging system* used in `<ant-refined-task>`, how well each tag is implemented, and if there are any inconsistencies.
+    - If there is a need for further refinement in the tagging system, and if any tags are missing or unnecessary.
+    - A detailed critique that analyzes strengths, weaknesses, and missed opportunities within the refined task.
+    - Reasoning-based actionable feedback to improve the refinement process further.
+  </ant-purpose>
+
+  <ant-context>
+  Inputs to guide your evaluation are as follows:
+  1. `<ant-task>` - The initial task requiring refinement utilizing the assisstant task tagging system.
+  2. `<ant-specialized-guidance>` - The specialized guidance used to refine `<ant-task>`.
+  3. `<ant-refined-task>` - The refined task developed using `<ant-specialized-guidance>`.
+  4. `<ant-refined-task-output>` - The result generated from `<ant-refined-task>`.
+  5. `<ant-general-evaluation>` - The static grading attributes for evaluating the refinement process and quality of output.
+  6. `<ant-reasoning-evaluation>` - The reasoning-based grading attributes for evaluating the effective implementation of prompting and reasoning techniques.
+  </ant-context>
+
+  <ant-operating-instructions>
+  - Analyze the 6 inputs given to you in `<ant-context>` thoroughly to evaluate the refinement process end-to-end.
+  - Use embedded reasoning techniques to analyze each dynamically decided evaluation attribute for the refined task workflow effectively.
+  - Dynamically reflect on how well the refined task meets the intended goals, constraints, standards and analyze the evaluation attributes provided in `<ant-general-evaluation>` & `<ant-reasoning-evaluation>`.
+  - Provide reasoning-based actionable steps to improve any weaknesses in the refinement process.
+  - Present your findings systematically as per `<ant-output-instructions>`, ensuring the final score is calculated based on defined grading attributes.
+  </ant-operating-instructions>
+
+  <ant-steps>
+  1. **Review the Inputs and Outputs**:
+     - Analyze `<ant-task>` to establish its goals, constraints, and objective.
+     - Evaluate `<ant-refined-task>` in terms of how effectively it incorporates these elements and leverages `<ant-specialized-guidance>` for improvement.
+     - Analyze `<ant-refined-task-output>` to determine how well the refinement translates into practical results.
+     - Review the static and reasoning-based grading attributes to understand the evaluation criteria.
+      - Analyze the tagging system used in `<ant-task>` and `<ant-refined-task>` to identify improvements and inconsistencies.
+
+  2. **Generate Insights and Actionable Feedback**:
+     - For each graded attribute, outline reasoning steps explaining strengths, weaknesses, and problems in the refinement process.
+     - Add suggestions for improvement—both for refining `<ant-task>` and `<ant-specialized-guidance>` to strengthen alignment with goals.
+
+  3. **Deliver a Structured Critique**:
+     - Write a detailed critique of `<ant-refined-task>`, focusing on missed opportunities, unnecessary complexity, or enhancements needed to meet future task goals.
+     - Add logical reflections on how improvements could be applied in iterative refinements.
+
+  4. **Finalize and Present Findings**:
+     - Summarize the overall strengths and weaknesses of the refinement process in `<ant-output-instructions>`.
+     - Deliver a clear, logically structured feedback document highlighting all critical elements and the **final numerical score out of 150**.
+  </ant-steps>
+
+  <ant-reasoning>
+  Use reasoning techniques to analyze and evaluate each aspect of the refinement process:
+  1. **Grading Attribute Reasoning**: Employ a layered reasoning process for each grading attribute. For example:
+      + Evaluate context using **Dynamic Prompting**: "Does this match the initial task constraints while improving depth?"
+      + Reflect using **Meta-Prompting**: "What broader goals does this refined task achieve? Does it introduce creative elements?"  
+  2. **Contextual Evaluation**: Use **Self-Ask Prompting** to dynamically assess improvements. E.g., ask: *"Does this refinement solve the fundamental issues raised in the critiques?"*
+  3. **Logical Pruning**: Filter out ineffective aspects of the task or output (in cases where goals or tone deviate), ensuring the feedback stays actionable.
+  4. **Reason + Action Feedback**: Combine evaluation insights with actionable plans to address weaknesses and capitalize on strengths.
+  </ant-reasoning>
+
+  <ant-output-instructions>
+  - Your output must include the following structured sections:
+    1. **Actionable Feedback**:
+        - Provide detailed feedback on the refinement process, highlighting strengths, weaknesses, and opportunities for improvement.
+        - Ensure explanations are logically reasoned and directly tied to the evaluated aspects of `<ant-task>` and `<ant-refined-task>`.
+    2. **Refined Prompt Critique**:
+        - Write a detailed critique for `<ant-refined-task>` focusing on:
+            + Missed opportunities for improvement
+            + Logical gaps or weaknesses in adapting `<ant-task>` to `<ant-refined-task>`
+            + Suggestions for restructuring the guidance to enhance future prompts
+  - **Actionable feedback must include structured reasoning and logical analysis** to justify every suggestion.
+  </ant-output-instructions>
+expected_output: >
+  <ant-output-instructions>
+  - Your output must include the following structured sections:
+    1. **Actionable Feedback**:
+        - Provide detailed feedback on the refinement process, highlighting strengths, weaknesses, and opportunities for improvement.
+        - Ensure explanations are logically reasoned and directly tied to the evaluated aspects of `<ant-task>` and `<ant-refined-task>`.
+    2. **Refined Prompt Critique**:
+        - Write a detailed critique for `<ant-refined-task>` focusing on:
+            + Missed opportunities for improvement
+            + Logical gaps or weaknesses in adapting `<ant-task>` to `<ant-refined-task>`
+            + Suggestions for restructuring the guidance to enhance future prompts
+  - **Actionable feedback must include structured reasoning and logical analysis** to justify every suggestion.
+  </ant-output-instructions>

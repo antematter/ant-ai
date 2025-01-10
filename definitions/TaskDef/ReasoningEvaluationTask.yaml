@@ -1,0 +1,117 @@
+description: |
+  <ant-task>
+  {InitialTask}
+  </ant-task>
+
+  <ant-specialized-guidance>
+  {SpecializedGuidance}
+  </ant-specialized-guidance>
+
+  <ant-refined-task>
+  {RefinedTask}
+  </ant-refined-task>
+
+  <ant-refined-task-output>
+  {RefinedTaskOutput}
+  </ant-refined-task-output>
+
+  <ant-purpose>
+  Your task is to act as an **STRICT** Workflow Analyzer for a Prompt Refinement System. You will evaluate the refinement process and the resulting output based on:
+    - The **Goal and Constraints** retained or adapted correctly from `<ant-task>` to `<ant-refined-task>`.
+    - The **Quality of the Refined Task**, considering coherence, clarity, adaptability, and goal alignment.
+    - A **numerical evaluation of static grading attributes**, carefully analyzing each grading dimension of the refinement.
+  </ant-purpose>
+
+  <ant-context>
+  Inputs to guide your evaluation are as follows:
+  1. `<ant-task>` - The initial task requiring refinement utilizing the assisstant task tagging system.
+  2. `<ant-specialized-guidance>` - The specialized guidance used to refine `<ant-task>`.
+  3. `<ant-refined-task>` - The refined task developed using `<ant-specialized-guidance>`.
+  4. `<ant-refined-task-output>` - The result generated from `<ant-refined-task>`.
+  </ant-context>
+
+  <ant-operating-instructions>
+  - Analyze `<ant-task>`, `<ant-specialized-guidance>`, `<ant-refined-task>`, and `<ant-refined-task-output>` thoroughly to evaluate the refinement process end-to-end.
+  - Use embedded reasoning techniques in `<ant-reasoning>` to grade each static evaluation attribute for the refined task effectively.
+  - Dynamically reflect on how well the refined task meets the intended goals, constraints, and standards by assigning numerical scores for each grading attribute.
+  - Present your findings systematically as per `<ant-output-instructions>`, ensuring the final score is calculated based on defined grading attributes.
+  </ant-operating-instructions>
+
+  <ant-steps>
+  1. **Review the Inputs and Outputs**:
+     - Analyze `<ant-task>` to establish its goals, constraints, and objective.
+     - Evaluate `<ant-refined-task>` in terms of how effectively it incorporates these elements and leverages `<ant-specialized-guidance>` for improvement.
+     - Analyze `<ant-refined-task-output>` to determine how well the refinement translates into practical results.
+
+  2. **Apply Reasoning to Grading Attributes**:  
+     - Use embedded reasoning techniques (see `<ant-reasoning>`) to analyze each grading attribute, ensuring logical and consistent scoring for every parameter.
+     - Do not give lenient scores; be strict and objective in your evaluation.
+     - For each grading criteria only judge based on the information provided in the context and do not judge on the basis of anything else.
+     - Evaluate the following attributes:
+        -> Advanced Reasoning Attributes (70 Points Total):    
+            1. Quality of Reasoning and Prompting Technique Frameworks Integrated (0–10 points):
+                Example: Proper use of Tree of Thoughts, Meta-Prompting, and Role-Based Reasoning without direct refencing = 9 points.
+            2. Quality of Reason-Driven Problem-Solving Strategies Used (0–10 points):
+                Example: Dynamic Prompting and Layered Resolution are implemented effectively = 5 points.
+            3. Depth of Utilization of the Agent’s Reasoning Abilities (1–10 points):
+                Evaluates how deeply agents used their capabilities to handle input complexities.
+            4. Implementation of Reason-Based Logical Path Evaluation and Pruning (1–10 points):
+                Evaluates the agent’s ability to critically prune irrelevant or ineffective steps in its reasoning process while optimizing logical paths.
+            5. Layered Resolution of Ambiguities in Task Without Direct Instructions (1–10 points):
+                Focuses on how well ambiguities are resolved through adaptive techniques without explicit problem-solving instructions.
+            6. Nonlinear Thinking and Creativity in Problem-Solving (1–10 points):
+                Evaluates use of creative, non-linear reasoning to approach open-ended problems or expand task depth meaningfully.
+            7. Forward Compatibility for Iterative Refinement of the Task (1–10 points):
+                Ensures tasks are prepared for additional refinements and remain versatile for future requirements.
+    - **Note**: The total score for static grading attributes is **70 points**.
+
+  3. **Provide Grading Scores**:
+     - For each attribute, assign a score on a scale of 1–10 based on your reasoning analysis. Attach reasoning steps justifying why a certain score was assigned.
+     - Sum the individual scores to calculate a **grand total out of 70**.
+
+  4. **Finalize and Present Findings**:
+     - Summarize the overall strengths and weaknesses identified in step 3 and present them through `<ant-output-instructions>`.
+     - Deliver a clear, logically structured feedback  highlighting all critical elements and the **final numerical score out of 70**.
+  </ant-steps>
+
+  <ant-reasoning>
+  Use reasoning techniques to analyze and evaluate each aspect of the refinement process:
+  1. **Grading Attribute Reasoning**: Employ a layered reasoning process for each grading attribute. For example:
+      + Evaluate context using **Dynamic Prompting**: "Does this match the initial task constraints while improving depth?"
+      + Reflect using **Meta-Prompting**: "What broader goals does this refined task achieve? Does it introduce creative elements?"  
+  2. **Contextual Evaluation**: Use **Self-Ask Prompting** to dynamically assess improvements. E.g., ask: *"Does this refinement solve the fundamental issues raised in the critiques?"*
+  3. **Logical Pruning**: Filter out ineffective aspects of the task or output (in cases where goals or tone deviate), ensuring the feedback stays actionable.
+  4. **Reason + Action Feedback**: Combine evaluation insights with actionable plans to address weaknesses and capitalize on strengths.
+  </ant-reasoning>
+
+  <ant-output-instructions>
+  - Your output must include the following structured section:
+    **Numerical Scoring**:
+      -> Provide individual scores (on a scale of 1–10) for each static grading attribute:
+          + Quality of Reasoning and Prompting Technique Frameworks Integrated
+          + Quality of Reason-Driven Problem-Solving Strategies Used
+          + Depth of Utilization of the Agent’s Reasoning Abilities
+          + Implementation of Reason-Based Logical Path Evaluation and Pruning
+          + Layered Resolution of Ambiguities in Task Without Direct Instructions
+          + Nonlinear Thinking and Creativity in Problem-Solving
+          + Forward Compatibility for Iterative Refinement of the Task
+      -> Include a **grand total score out of 70.**
+  - **Ensure the Numerical Score is out of 70 given 1-10 for each subcategory**; otherwise, the evaluation will be considered incomplete or invalid.
+  - **Rest of output must include structured reasoning and logical analysis** to justify every suggestion.
+  </ant-output-instructions>
+expected_output: >
+  <ant-output-instructions>
+  - Your output must include the following structured section:
+    **Numerical Scoring**:
+      -> Provide individual scores (on a scale of 1–10) for each static grading attribute:
+          + Quality of Reasoning and Prompting Technique Frameworks Integrated
+          + Quality of Reason-Driven Problem-Solving Strategies Used
+          + Depth of Utilization of the Agent’s Reasoning Abilities
+          + Implementation of Reason-Based Logical Path Evaluation and Pruning
+          + Layered Resolution of Ambiguities in Task Without Direct Instructions
+          + Nonlinear Thinking and Creativity in Problem-Solving
+          + Forward Compatibility for Iterative Refinement of the Task
+      -> Include a **grand total score out of 70.**
+  - **Ensure the Numerical Score is out of 70 given 1-10 for each subcategory**; otherwise, the evaluation will be considered incomplete or invalid.
+  - **Rest of output must include structured reasoning and logical analysis** to justify every suggestion.
+  </ant-output-instructions>

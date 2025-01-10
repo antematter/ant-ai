@@ -1,0 +1,86 @@
+description: |
+  <ant-task>
+  {InitialTask}
+  </ant-task>
+
+  <ant-instructions>
+      - Before responding, analyze this prompt and all its components thoroughly.
+      - Ensure that the final answer is generated with a **singular focus on refining `<ant-task>`** and NOT producing its output.
+      - Ensure that the agents goals are stritctly not towards discussing the content of `<ant-task>` directly but creating the best possible task definition for the next intelligent assistant.
+      - Ensure that the team composition explicitly aims to **improve the identified task definition improvement crities of `<ant-task>`**, enabling it to prompt the intelligent assistant that is going to be presented the refined version to effectively generate the best possible outputs.
+      - Ensure that the **agent-goals** clearly state how the agents' optimizations contribute to refining `<ant-task>`, focusing on improving the identified criterias in `<ant-steps>`.
+      - Ensure that the **agent-tasks** contain detailed, step-by-step contributions that involve **refining `<ant-task>` itself** using targeted prompting and reasoning techniques, avoiding references to `<ant-task>`'s eventual output or generated content.
+      - Do not include redundant tasks or roles. Each team member's contribution must be as distinct and non-overlapping as possible.
+      - Follow the steps outlined in `<ant-steps>` to achieve the desired outcome.
+      - Utilize the reasoning techniques specified in `<ant-reasoning>` to guide your thinking process.
+      - Avoid focus on the ethical concerns regarding `<ant-task>` while deciding on the team composition.
+      - Do not create roles that are not directly related to refining `<ant-task>` i.e "Team Collaboration Expert" since each agent will be working independently on refining the task.
+  </ant-instructions>
+
+  <ant-steps>
+      1. **Analyze** the task specified in `<ant-task>` from multiple perspectives to ensure it yields the best possible results.
+      2. **Devise** a dynamic and efficient team consisting of {AgentCount} members to collaboratively refine `<ant-task>` into a more effective prompt for generating high-quality outcomes with an intelligent assistant.
+      3. **Figure out** areas of improvement in `<ant-task>`'s task defintion that can be addressed by the team members' specialized expertise. 
+          - Analyze Various Aspects of the Task Definition in `<ant-task>` which require improvement to make a better defined task for the assisstant.
+          - Prune the Aspects analyzed which related to the content of the task itself and only keep those which are relevent to creating the best possible task definition.
+          - Each Identified Aspect must be focused at creating the best possible version of the task definition `<ant-task>` so the intelligent assistant can generate the best possible output.
+          - The following are some examples of aspects that can be improved in `<ant-task>` to define your way of thinking:
+              - Clarity of the task definition.
+              - Adaptability of the task definition.
+              - Goal Alignment of the task definition.
+              - Constraints of the task definition.
+              - Reasoning Depth of the task definition.
+              - Researched Depth of the task definition.
+              - Precision and Tone of the task definition.
+              - Effectiveness of Guidance in the task definition.
+              - Quality of the Tagging System in the task definition.
+      4. **Brainstorm** ways in which each team member can uniquely contribute to the optimization of the aspects previously identified. The goal is to create a team that optimizes `<ant-task>` itself for effectively taking action on identified criterias.
+      5. **Format** the selected team systematically, outlining the following attributes for each member:
+          - `<agent-name>` must clearly state the role of the team member, such as "___ Expert" which corresponds to their specific contribution toward refining `<ant-task>`.
+          - `<agent-goal>` must include a detailed description of the unique goal for improving `<ant-task>`.
+          - `<agent-backstory>` must describe the ideal background, skillset, and motivation for each role, presenting why they are suited for optimizing `<ant-task>`.
+          - `<agent-task>` must explain, in a structured and detailed manner, the specific steps the team member must perform to refine the tagged task definition in `<ant-task>` using advanced prompting and reasoning techniques, ensuring their task contribution is focused and non-overlapping with others so the best possible assignment is created for the next intelligent assisstant.
+      6. **Respond** with the finalized team selection using the format specified in `<ant-output-instructions>`.
+  </ant-steps>
+
+  <ant-reasoning>
+  Use structured reasoning techniques to dynamically assess and optimize the refinement process and team composition:
+    1. **Dynamic Role Identification**: Look for specific gaps or inefficiencies in `<ant-task>`, and reason about what kind of expertise is required to improve those areas dynamically.  
+    2. **Layered Improvements**: Assign each agent iterative tasks that include analyzing problems, revising solutions, and working towards the identified aspects of `<ant-task>`. Ensure reasoning remains present throughout.  
+    3. **Collaborative Alignment**: Ensure the roles and tasks of the team complement each other logically, without redundancy or conflicts, to create a parallel improvement of `<ant-task>`.  
+    4. **Iterative Refinement Loops**: Integrate reasoning cycles that allow agents to revisit and refine their contributions dynamically, testing whether proposed solutions enhance the task’s purpose while respecting constraints.  
+  </ant-reasoning>
+
+  <ant-output-instructions>
+      - The output must consist of a series of `<ant-output-object>` entries devised through the steps in `<ant-steps>`.
+      - Only include the highest-priority and most impactful `<ant-output-object>` set of entries identified through the analysis.
+      - Do not include any instructional text apart from the formatted `<ant-output-object>` attributes.
+      - Ensure `<agent-backstory>` in each `<ant-output-object>` is phrased as a personal introduction (e.g., "You are a...").
+      - Ensure `<agent-goal>` in each `<ant-output-object>` is phrased as a mission statement (e.g., "As an `<agent-name>`, Your goal...").
+      - Ensure that you reference to `<ant-task>` in the `<agent-task>` attribute for each agent, explaining how its going to refine it by utilizing Chain of Thoughts.
+      **NOTE** : if `<agent-task>` is not related to refining `<ant-task>` it will be considered as an invalid response and will ruin the entire system.
+      **NOTE** : `<ant-task>` is the task that needs to be refined and `<ant-output-object>` defines the agents that will refine the task and **NOT** create a deliverable or refine the content for the task itself.
+  </ant-output-instructions>
+
+  <ant-output-object>
+      Agent Name = `<agent-name>`
+      Agent Goal = `<agent-goal>`
+      Agent Backstory = `<agent-backstory>`
+      Agent Task = `<agent-task>`
+  </ant-output-object>
+expected_output: |
+  <ant-output-instructions>
+      - The output must consist of a series of `<ant-output-object>` entries devised through the steps in `<ant-steps>`.
+      - Only include the highest-priority and most impactful `<ant-output-object>` set of entries identified through the analysis.
+      - Do not include any instructional text apart from the formatted `<ant-output-object>` attributes.
+      - Ensure `<agent-backstory>` in each `<ant-output-object>` is phrased as a personal introduction (e.g., "You are a...").
+      - Ensure `<agent-goal>` in each `<ant-output-object>` is phrased as a mission statement (e.g., "As an `<agent-name>`, Your goal...").
+      - Ensure that you reference to `<ant-task>` in the `<agent-task>` attribute for each agent, explaining how its going to refine it by utilizing Chain of Thoughts.
+  </ant-output-instructions>
+
+  <ant-output-object>
+      Agent Name = `<agent-name>`
+      Agent Goal = `<agent-goal>`
+      Agent Backstory = `<agent-backstory>`
+      Agent Task = `<agent-task>`
+  </ant-output-object>

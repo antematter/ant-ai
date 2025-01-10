@@ -1,0 +1,67 @@
+description: |
+  <ant-task>
+    {InitialTask}
+  </ant-task>
+
+  <ant-agent>
+    {AgentName}
+  </ant-agent>
+
+  <ant-agent-backstory>
+    {AgentBackstory}
+  </ant-agent-backstory>
+
+  <ant-agent-goal>
+    {AgentGoal}
+  <ant-agent-goal>
+
+  <ant-agent-task>
+    {AgentTask}
+  </ant-agent-task>
+
+  <ant-instructions>
+      - Before responding, analyze this prompt and all its components thoroughly.
+      - Make a list of all bad assumptions that could skew your judgement and throw them out.
+      - Ensure that all the attributes of output subsections are relevent to the agent's expertise and well detailed.
+  </ant-instructions>
+
+  <ant-context>
+    You are asked to generate a critique that will guide an intelligent assisstant in refining advice for improving an initial prompt based on their specific expertise, goal & taskflow.
+    The critique should give the agent clear instructions on **how** to refine the initial prompt in line with their expertise.
+    The critique should **not** include specific output instructions related to the content of the prompt itself, but rather direct guidance on improving the prompt itself according to the agent’s specialization.
+  </ant-context>
+
+  <ant-steps>
+    - **Analyze** The following inputs provided along with their context thoroughly:
+      1. `<ant-task>` - The initial task that requires improvement with the tagging system implemented.
+      2. `<ant-agent>` - The agent and their specific expertise.
+      3. `<ant-agent-backstory>` - The agent's professional background.
+      4. `<ant-agent-goal>` - The agent's goal and mission statement.
+      5. `<ant-agent-task>` - The agent's task and specific steps to be performed.
+    - **Examine** the tagging system used in `<ant-task>` and how it can be improved and if there are any inconsistencies.
+    - **Critique** `<ant-task>` thoroughly and identify areas within each tag that need improvement.
+    - **Pinpoint** the agent's expertise and how it can be leveraged to refine the content of `<ant-task>` through `<ant-agent-backstory>`.
+    - **Devise** a critique that guides the `<ant-agent>` agent on how to refine `<ant-task>` based on their expertise.
+    - **Ensure** that the critique does not include specific output instructions related to the content of the prompt itself.
+    - **Present** the following features in your critique:
+      1. **Specialized Critique**: Provide clear critique regarding issues in `<ant-task>` that need to be addressed which are relevant to agent's expertise.
+      2. **Specialized Guidance**: Direct the agent on how to refine the initial prompt `<ant-task>` in line with their expertise and their goal.
+  </ant-steps>
+
+  <ant-output-instructions>
+      - The output must consist of a two sections that focuses on guiding the agent to refine the initial prompt, based on their expertise, without directly addressing the output of the initial prompt.
+      - Ensure that the critique is clear, detailed, and directly relevant to the agent's expertise.
+      - Do not include any instructional text not relevant to the critique.
+      - The following two sections should be included in the output:
+        1. **Specialized Critique**: Provide clear critique regarding issues in `<ant-task>` that need to be addressed which are relevant to agent's expertise.
+        2. **Specialized Guidance**: Direct the agent on how to refine the initial prompt `<ant-task>` in line with their expertise and their goal.
+  </ant-output-instructions>
+expected_output: >
+  <ant-output-instructions>
+      - The output must consist of a two sections that focuses on guiding the agent to refine the initial prompt, based on their expertise, without directly addressing the output of the initial prompt.
+      - Ensure that the critique is clear, detailed, and directly relevant to the agent's expertise.
+      - Do not include any instructional text not relevant to the critique.
+      - The following two sections should be included in the output:
+        1. **Specialized Critique**: Provide clear critique regarding issues in `<ant-task>` that need to be addressed which are relevant to agent's expertise.
+        2. **Specialized Guidance**: Direct the agent on how to refine the initial prompt `<ant-task>` in line with their expertise and their goal.
+  </ant-output-instructions>
