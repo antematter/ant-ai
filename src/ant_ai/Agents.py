@@ -1,6 +1,10 @@
+import sys
+import locale
+
 import asyncio
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import sys
 
 import openai
 from openai import OpenAI, AsyncOpenAI
@@ -10,11 +14,12 @@ from crewai import LLM, Agent, Crew, Task
 from crewai.flow.flow import Flow, listen, start, and_
 
 
+
+
 # Initialize a new Crew with specified Agent and Task settings from YAML files.
 def GetCrew(
     AgentYamlFile,
     TaskYamlFile,
-    OutputFile,
     LLM,
     verbose,
     allow_delegation,
@@ -50,7 +55,7 @@ def GetCrew(
             output_pydantic=Pydantic,
             async_execution=Async,
         )
-    NewCrew = Crew(agents=[NewAgent], tasks=[NewTask], output_log_file=OutputFile,share_crew=False)
+    NewCrew = Crew(agents=[NewAgent], tasks=[NewTask],share_crew=False)
     return NewCrew
 
 # Initialize a new Crew with specified Agent and Task settings from YAML files.

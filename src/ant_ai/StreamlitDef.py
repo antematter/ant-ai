@@ -7,8 +7,11 @@ from pydantic import BaseModel
 import streamlit as st
 import yaml
 
-import Agents
-import Logger
+from ant_ai import Agents
+from ant_ai import Logger
+
+import sys
+
 
 #Default GA Configuration
 default_config = {
@@ -57,7 +60,6 @@ def prepare_agents(verbose_mode):
     InitialPromptCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "MasterAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "PromptGeneration.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "InitialMasterLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.4
         ),
@@ -70,7 +72,6 @@ def prepare_agents(verbose_mode):
     PromptMutationCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "MutationAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "MutationTask.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "PromptMutationLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.8
         ),
@@ -83,7 +84,6 @@ def prepare_agents(verbose_mode):
     PromptCrossoverCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "CrossoverAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "CrossoverTask.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "CrossoverLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.7
         ),
@@ -97,7 +97,6 @@ def prepare_agents(verbose_mode):
     PromptGeneralEvaluationCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "EvaluationAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "GeneralEvaluationTask.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "EvaluationLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.2
         ),
@@ -111,7 +110,6 @@ def prepare_agents(verbose_mode):
     PromptReasoningEvaluationCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "EvaluationAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "ReasoningEvaluationTask.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "EvaluationLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.2
         ),
@@ -125,7 +123,6 @@ def prepare_agents(verbose_mode):
     PromptCritiqueEvaluationCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "EvaluationAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "EvaluationCritiqueTask.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "EvaluationLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.6
         ),
@@ -139,7 +136,6 @@ def prepare_agents(verbose_mode):
     DynamicAgentCreationCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "DynamicAgentManager.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "AgentCreation.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "DynamicAgentCreationLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.3
         ),
@@ -153,7 +149,6 @@ def prepare_agents(verbose_mode):
     InitialCritiqueCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "CritiquePromptAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "CritiquePromptGeneration.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "InitialMetaMasterLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o-mini",api_key=os.environ["OPENAI_API_KEY"],temperature=0.6
         ),
@@ -167,7 +162,6 @@ def prepare_agents(verbose_mode):
     FinalUnificationCrew = Agents.GetCrew(
         AgentYamlFile = os.path.join(base_dir, "definitions", "AgentDef", "CombinationAgent.yaml"),
         TaskYamlFile = os.path.join(base_dir, "definitions", "TaskDef", "CombinationTask.yaml"),
-        OutputFile = os.path.join(base_dir, "logs", "CombinationLogs.txt"),
         LLM=Agents.LLM(
         model="gpt-4o",api_key=os.environ["OPENAI_API_KEY"],temperature=0.9
         ),
@@ -683,9 +677,9 @@ def update_log(new_entry):
     log_area.text("\n".join(log_list))
 
 # Asynchronously optimize a provided prompt using verbose, fast, and dynamic modes.
-async def OptimizePrompt_async(LaymanPrompt, Persona, Constraints, api_key, verbose,dynamic_mode):
+async def OptimizePrompt_async(LaymanPrompt, Persona, Constraints, api_key,dynamic_mode):
     os.environ["OPENAI_API_KEY"]=api_key
-    prepare_agents(verbose)
+    prepare_agents(False)
     global log_list
     log_list = []
     global log_section
@@ -800,7 +794,7 @@ async def OptimizePrompt_async(LaymanPrompt, Persona, Constraints, api_key, verb
     
     FinalPrompt = await FinalUnificationCrew.kickoff_async(inputs={"AntTaskList": ConcatenatedText})
     update_log(f"*** Final Prompt Generated ***\n\n")
-    return FinalPrompt.raw,Validity
+    return FinalPrompt.raw,Validity, "\n".join(log_list)
 
 
 
@@ -863,9 +857,9 @@ async def generate_population_async_fast(initial_prompt, agent_inputs):
 
 
 # Execute a fast optimization pass on a provided prompt using available modes.
-async def OptimizePrompt_async_fast(LaymanPrompt, Persona, Constraints, api_key, verbose, dynamic_mode):
+async def OptimizePrompt_async_fast(LaymanPrompt, Persona, Constraints, api_key, dynamic_mode):
     os.environ["OPENAI_API_KEY"]=api_key
-    prepare_agents(verbose)
+    prepare_agents(False)
     global log_list
     log_list = []
     global log_section
@@ -956,4 +950,4 @@ async def OptimizePrompt_async_fast(LaymanPrompt, Persona, Constraints, api_key,
     
     FinalPrompt = await FinalUnificationCrew.kickoff_async(inputs={"AntTaskList": ConcatenatedText})
     update_log(f"*** Final Prompt Generated ***\n\n")
-    return FinalPrompt.raw,Validity
+    return FinalPrompt.raw,Validity, "\n".join(log_list)

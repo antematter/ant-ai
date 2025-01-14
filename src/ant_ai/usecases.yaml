@@ -1,0 +1,61 @@
+Prompts:
+  - Title: "ICP Identification"
+    Prompt: >-
+      Antematter is an AI consultancy firm specializing in Agentic AI and Blockchain solutions.
+      Your task is to create a comprehensive list of exactly three Ideal Customer Profiles (ICPs)
+      for Antematter. For each ICP, identify specific traits, objectives, and pain points that Antematter
+      can address. Ensure the traits are sharp and not generic. Note that Antematter has mostly worked with
+      SMBs and startups, delivering MVPs in their domain.
+    Persona: "Fortune 500 Growth Specialist"
+    Constraints: >-
+      Provide exactly three detailed ICPs with precise descriptions.
+      Ensure all traits, objectives, and pain points are specific and not generic.
+
+  - Title: "Quality Assurance (QA) SOP"
+    Prompt: >-
+      Develop a thorough yet concise Standard Operating Procedure (SOP) on Quality Assurance (QA) for Antematter,
+      a Fortune 500 AI consultancy firm specializing in Agentic AI and Blockchain. The SOP should include:
+      1. Instructions for developers before pushing code to GitHub.
+      2. Guidelines for QA Engineers once the code has been pushed.
+      3. Protocols for production release when delivering the product.
+      Ensure that each section is coherent and logically connected.
+    Persona: "Chief Technology Officer (CTO) of Fortune 500 Companies"
+    Constraints: >-
+      The SOP must be precise with no unnecessary content.
+      Provide a complete document with clearly defined sections.
+      Avoid generic information; focus on specific, actionable instructions.
+
+  - Title: "Company Onboarding Program"
+    Prompt: >-
+      Design a detailed onboarding program for new employees joining Antematter's Agentic AI and Blockchain teams.
+      The program should include orientation sessions, training modules, and mentorship opportunities that align with
+      the company's cutting-edge technologies and methodologies.
+    Persona: "Human Resources Director of a Tech Innovator"
+    Constraints: >-
+      The onboarding program must be innovative and tailored to Antematter's specialties.
+      Provide specific activities and resources, avoiding generic onboarding practices.
+      Ensure the program fosters quick integration and skill acquisition.
+
+  - Title: "Marketing Email"
+    Prompt: >-
+      Antematter has developed a new feature for their Agentic AI platform that integrates seamlessly with popular
+      project management tools. Your task is to create a marketing email that announces this new feature to existing
+      clients, highlighting the benefits and encouraging them to adopt it. The email should be engaging, concise,
+      and tailored to busy professionals.
+    Persona: "Marketing Communications Specialist"
+    Constraints: >-
+      The email must be clear and compelling, with a strong call-to-action.
+      Use professional language appropriate for corporate clients.
+      Avoid generic phrases; focus on specific benefits of the new integration.
+
+  - Title: "Competitor Analysis Report"
+    Prompt: >-
+      Compile a comprehensive competitor analysis report for Antematter, focusing on other AI consultancy firms
+      specializing in Agentic AI and Blockchain. The report should include their service offerings, market
+      positioning, pricing strategies, and client testimonials. Provide actionable insights on how Antematter
+      can differentiate itself in the market.
+    Persona: "Market Research Analyst in the Tech Sector"
+    Constraints: >-
+      The report must be detailed and include up-to-date information.
+      Use data from credible sources to support your analysis.
+      Avoid generic observations; provide specific strategies for differentiation.
