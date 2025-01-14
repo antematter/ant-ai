@@ -91,6 +91,8 @@ def subscribe_to_beehiiv(email,name):
 
 
 
+if 'subscribed' not in st.session_state:
+    st.session_state.subscribed = False
 
 # Newsletter banner with improved styling
 st.markdown(
