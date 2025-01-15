@@ -93,7 +93,7 @@ def subscribe_to_beehiiv(email,name):
             return True, "Successfully Subscribed!"
         else:
             print(f"Error: Email Subscription Request failed with status code {response.status_code}: {response.text}")
-            return False, "Something went wrong. Please try again later.",response
+            return False, "Something went wrong. Please try again later."
 
     except requests.RequestException as e:
         # Handle any exceptions during the request
@@ -227,10 +227,6 @@ if not st.session_state.subscribed:
                     st.rerun()
                 else:
                     st.error(message)
-                    st.text("Response Code : "+response.status_code)
-                    st.text("Response : "+response.text)
-                    st.text("BEEHIV API KEY :"+BEEHIIV_API_KEY)
-                    st.text("BEEHIV PUBLICATION ID :"+BEEHIIV_PUBLICATION_ID)
             else:
                 st.error("Please enter your email address")
 else:
