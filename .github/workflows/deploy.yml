@@ -1,0 +1,47 @@
+name: Deploy via SSH
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.AWS_SSH_KEY }}
+
+      - name: Check Docker and Docker Compose
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.AWS_EC2_HOST }} '
+            if ! command -v docker &> /dev/null || ! command -v docker-compose &> /dev/null; then
+              echo "Docker or Docker Compose is not installed." >&2
+              exit 1
+            fi
+          '
+
+      - name: Clone Repo and Deploy
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.AWS_EC2_HOST }} '
+            REPO_DIR=/home/ubuntu/ant-ai
+            if [ -d "$REPO_DIR" ]; then
+              rm -rf "$REPO_DIR"
+            fi
+            git clone https://github.com/antematter/ant-ai.git $REPO_DIR
+            cd $REPO_DIR
+            echo "${{ secrets.ENV_PROD }}" > .env
+            
+            # Stop and remove any existing containers with the same name
+            docker-compose down
+            
+            # Build and run containers
+            docker-compose build --no-cache
+            docker-compose up -d
+          '
