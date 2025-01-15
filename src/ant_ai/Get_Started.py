@@ -11,6 +11,7 @@ import streamlit as st
 import yaml
 from dotenv import load_dotenv
 
+
 base_dir = os.path.dirname(os.path.abspath("__file__"))
 load_dotenv(os.path.join(base_dir, ".env"))
 
@@ -20,6 +21,17 @@ st.set_page_config(
     page_title="Ant-AI by Antematter",
     page_icon="https://antematter.io/images/logo.svg",
 )
+
+st.markdown("""
+        <style>
+               .block-container {
+                    padding-top: 0.5rem;
+                    padding-bottom: 3rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 
 st.markdown("""
@@ -94,19 +106,75 @@ def subscribe_to_beehiiv(email,name):
 if 'subscribed' not in st.session_state:
     st.session_state.subscribed = False
 
-# Newsletter banner with improved styling
-st.markdown(
-"""
-<div style="padding:15px 15px 0px 15px; border-radius:10px; display: flex; align-items: center; justify-content: center;">
-<img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/474e213b-3d7a-49ae-9260-c00e2294271f/Frame_35100.png" height="120" alt="Logo" style="border-radius: 10%; margin-right: 20px;">
-<div style="display: flex; flex-direction: column; align-items: center;">
-<span style="font-weight:bold; font-size: 40px; margin-top:-10px; margin-bottom:-10px;">Subscribe to The Antedote</span>
-<span style="color:gray; font-size: 23px; margin-bottom:0px;">Sharp takes on making AI agents work (and be reliable).</span>
-</div>
-</div>
-""",
-unsafe_allow_html=True
-)
+
+# st.markdown(
+# """
+# <div style="padding:15px 15px 0px 15px; border-radius:10px; display: flex; align-items: center; justify-content: center;">
+# <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/474e213b-3d7a-49ae-9260-c00e2294271f/Frame_35100.png" height="100em" alt="Logo" style="border-radius: 10%; margin-right: 20px;">
+# <div style="display: flex; flex-direction: column; align-items: center;">
+# <span style="font-weight:bold; font-size: 40px; margin-top:-10px; margin-bottom:-10px;">Subscribe to The Antedote</span>
+# <span style="color:gray; font-size: 23px; margin-bottom:0px;">Sharp takes on making AI agents work (and be reliable).</span>
+# </div>
+# </div>
+# """,
+# unsafe_allow_html=True
+# )
+
+with st.container():
+    st.markdown(
+        """
+        <style>
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+        }
+        .center-column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px; /* Desired height for vertical centering */
+        }
+        img.rounded {
+            border-radius: 10px; /* Round the image's corners */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Define columns with specified proportions
+    cols = st.columns([30, 60, 230, 30])
+
+    with cols[1]:
+        # Center-align the image within its column and make corners rounded
+        st.markdown(
+            """
+            <div class="center-column">
+                <img class="rounded" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/474e213b-3d7a-49ae-9260-c00e2294271f/Frame_35100.png" width="100">
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    with cols[2]:
+        # Center-align the text within its column
+        st.markdown(
+            """
+            <div class="center-column">
+                <div class="center-content">
+                    <span style="font-weight:bold; font-size: 30px;">Subscribe to The Antedote</span>
+                    <span style="color:gray; font-size: 18px; margin-top: 3px;">Sharp takes on making AI agents work (and be reliable).</span>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
 
 # Add custom styling for the button
 st.markdown("""
@@ -139,7 +207,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Add the button as a Streamlit component
-col1, col2, col3, col4 = st.columns([1,6,3,1])
+col1, col2, col3, col4 = st.columns([1.5,6,3,1.5])
 
 if not st.session_state.subscribed:
     with col2:
